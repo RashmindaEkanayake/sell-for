@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Categories - Sell For Bookstore</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen flex flex-col">
+    <header class="sticky top-0 z-50 w-full border-b border-white/20 dark:border-slate-700/30 glass-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="text-primary">
+                        <svg class="w-8 h-8" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight serif-heading text-slate-900 dark:text-white">Sell
+                        For</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="shop.html">Shop</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors text-primary"
+                        href="categories.html">Categories</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button id="mobile-menu-toggle" class="md:hidden p-2 text-slate-600 dark:text-slate-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    <button
+                        class="p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors flex items-center justify-center"
+                        id="dark-mode-toggle">
+                        <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                        <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="5" />
+                            <path
+                                d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                        </svg>
+                    </button>
+                    <a href="cart.html"
+                        class="relative p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                            <line x1="3" y1="6" x2="21" y2="6" />
+                            <path d="M16 10a4 4 0 0 1-8 0" />
+                        </svg>
+                        <span
+                            class="absolute top-1 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white cart-badge">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden border-t border-white/20 dark:border-slate-700/30 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl">
+            <nav class="flex flex-col p-4 gap-4">
+                <a class="text-sm font-medium" href="index.html">Home</a>
+                <a class="text-sm font-medium" href="shop.html">Shop</a>
+                <a class="text-sm font-medium text-primary" href="categories.html">Categories</a>
+                <a class="text-sm font-medium" href="cart.html">Cart (<span class="cart-badge">0</span>)</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-16 flex-grow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl serif-heading text-slate-900 dark:text-white mb-12 text-center">Browse Collections</h1>
+            <div id="categories-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamic rendering -->
+            </div>
+        </div>
+    </main>
+
+    <footer
+        class="bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl border-t border-white/20 dark:border-slate-700/30 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-400">
+            <p>© 2024 Sell For Bookstore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const list = document.getElementById('categories-list');
+            list.innerHTML = categories.map(cat => `
+                <a href="shop.html?category=${cat.id}" class="group relative block h-80 rounded-2xl overflow-hidden shadow-xl hover-lift">
+                    <div class="absolute inset-0 ${cat.color} group-hover:bg-opacity-40 transition-all z-10"></div>
+                    <img src="${cat.image}" alt="${cat.name}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-x-0 bottom-0 p-8 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent">
+                        <h2 class="text-3xl font-bold text-white serif-heading mb-2">${cat.name}</h2>
+                        <p class="text-white/80 text-sm">Explore our curated ${cat.name.toLowerCase()} collection</p>
+                    </div>
+                </a>
+            `).join('');
+        });
+    </script>
+</body>
+
+</html>

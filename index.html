@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sell For - Discover Your Next Favorite Book</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+    <header class="sticky top-0 z-50 w-full border-b border-white/20 dark:border-slate-700/30 glass-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="text-primary">
+                        <svg class="w-8 h-8" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight serif-heading text-slate-900 dark:text-white">Sell
+                        For</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium hover:text-primary transition-colors text-primary"
+                        href="index.html">Home</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="shop.html">Shop</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="categories.html">Categories</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <div class="hidden lg:flex items-center bg-slate-100 dark:bg-slate-800 rounded-lg px-3 py-1.5 w-64">
+                        <svg class="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="m21 21-4.35-4.35" />
+                        </svg>
+                        <input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-slate-400"
+                            placeholder="Search books..." type="text" />
+                    </div>
+                    <button id="mobile-menu-toggle" class="md:hidden p-2 text-slate-600 dark:text-slate-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    <button
+                        class="p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors flex items-center justify-center"
+                        id="dark-mode-toggle">
+                        <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                        <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="5" />
+                            <path
+                                d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                        </svg>
+                    </button>
+                    <a href="cart.html"
+                        class="relative p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                            <line x1="3" y1="6" x2="21" y2="6" />
+                            <path d="M16 10a4 4 0 0 1-8 0" />
+                        </svg>
+                        <span
+                            class="absolute top-1 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white cart-badge">0</span>
+                    </a>
+                    <div class="h-8 w-8 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden cursor-pointer">
+                        <img alt="Profile" class="h-full w-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVxP89fU7_XtFFXC6HOVoV9AnBo7BnBbVq_DxURq2A_C9VraQsuD7yTZfY4tallvLTzofaU6ii5G6abjz0iXdkb_0JSI0H37Pp2i6vGHtWAjCIiNCxgV7EPS584-9rhnnD1Bs8E3IyEAgPn5F4Og33IEvyv_hoHY2gZd5HdBBcCJhyljqUCeOr5XbKl1Rmds0AlFMItBP3Td-USaKEaYwU_xaqb4Kl3Q3C0LgF33ivNhEC9XYLNaAFKMnzDyGfw1dOBkB5vIYY_4E" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden border-t border-white/20 dark:border-slate-700/30 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl">
+            <nav class="flex flex-col p-4 gap-4">
+                <a class="text-sm font-medium text-primary" href="index.html">Home</a>
+                <a class="text-sm font-medium" href="shop.html">Shop</a>
+                <a class="text-sm font-medium" href="categories.html">Categories</a>
+                <a class="text-sm font-medium" href="cart.html">Cart (<span class="cart-badge">0</span>)</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+                <div class="flex flex-col gap-8 max-w-xl">
+                    <h1
+                        class="text-5xl lg:text-7xl serif-heading leading-tight tracking-tight text-slate-900 dark:text-white">
+                        Discover your next <span class="text-primary italic">favorite</span> book.
+                    </h1>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Explore thousands of titles from bestsellers to indie gems. Curated selections just for your
+                        reading taste.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="shop.html"
+                            class="px-8 py-4 bg-primary text-white font-bold rounded-lg shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all flex items-center gap-2">
+                            <span>Shop Now</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                        <a href="categories.html"
+                            class="px-8 py-4 bg-white/40 dark:bg-slate-800/40 border border-white/30 dark:border-slate-700/30 text-slate-900 dark:text-white font-bold rounded-lg hover:bg-white/50 transition-all backdrop-blur-md">
+                            Browse Categories
+                        </a>
+                    </div>
+                </div>
+                <div class="relative hidden lg:block">
+                    <div class="absolute -top-12 -right-12 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-primary/20 rounded-full blur-3xl"></div>
+                    <img alt="Books Stack"
+                        class="relative rounded-2xl shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500 object-cover aspect-[4/3] w-full"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_F7RlqOsvmh4jrEw10S-LaINjh8eG_DoeYyUau6CgfM3OucxNsMqTI4dviFwanA7ncptTVMc9KQMjLjZS6Ca7RDXL9w912Ix5Jew3ISkdTHJ0LSURm_AErFDmhlWzp9ZkwFKcvT0Md5v5LSP_NcpUDKbrxgrQ127xF6Y3-20PfKHFPlgm9RRTs5K6hqImB0J8jebIYC48amp0KCfWuS8NOPu4G2cI7-tkK1wcZS9N9cMtrEt9RC0QAfSR4SZe4OhNa8_vt1SeMGE" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Books Section -->
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-end justify-between mb-12">
+                    <div>
+                        <h2 class="text-3xl serif-heading text-slate-900 dark:text-white mb-2">Featured Books</h2>
+                        <p class="text-slate-500 dark:text-slate-400">Our handpicked recommendations for this month.</p>
+                    </div>
+                    <a class="text-primary font-bold flex items-center gap-1 hover:underline" href="shop.html">
+                        View all
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                    </a>
+                </div>
+                <div id="featured-books"
+                    class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 lg:gap-8">
+                    <!-- Dynamic rendering -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="py-20 bg-white/10 dark:bg-slate-900/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl serif-heading text-slate-900 dark:text-white mb-4">Browse by Category</h2>
+                    <p class="text-slate-600 dark:text-slate-400">Find your niche across our diverse library</p>
+                </div>
+                <div id="categories-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Dynamic rendering -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer
+        class="bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl border-t border-white/20 dark:border-slate-700/30 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6 text-primary">
+                        <svg class="w-6 h-6" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+                        </svg>
+                        <span class="text-xl font-bold serif-heading text-slate-900 dark:text-white">Sell For</span>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        Your destination for curated literary experiences. From timeless classics to tomorrow's
+                        bestsellers.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-slate-900 dark:text-white uppercase tracking-wider text-xs">Shop</h4>
+                    <ul class="space-y-4">
+                        <li><a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary transition-colors"
+                                href="shop.html">Bestsellers</a></li>
+                        <li><a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary transition-colors"
+                                href="shop.html">New Releases</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-slate-900 dark:text-white uppercase tracking-wider text-xs">Support
+                    </h4>
+                    <ul class="space-y-4">
+                        <li><a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary transition-colors"
+                                href="#">Help Center</a></li>
+                        <li><a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary transition-colors"
+                                href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-slate-900 dark:text-white uppercase tracking-wider text-xs">
+                        Newsletter</h4>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Join our list for exclusive releases.</p>
+                    <div class="flex gap-2">
+                        <input
+                            class="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm border border-white/20 dark:border-slate-700/30 rounded-lg text-sm w-full focus:ring-primary"
+                            placeholder="Email address" type="email" />
+                        <button class="p-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <line x1="22" y1="2" x2="11" y2="13" />
+                                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+                <p>© 2024 Sell For Bookstore. All rights reserved.</p>
+                <div class="flex gap-8">
+                    <a class="hover:text-slate-600 dark:hover:text-slate-200" href="#">Privacy Policy</a>
+                    <a class="hover:text-slate-600 dark:hover:text-slate-200" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Render Featured Books
+            const featuredGrid = document.getElementById('featured-books');
+            featuredGrid.innerHTML = books.filter(b => b.featured).map(book => `
+                <div class="group flex flex-col gap-4 glass-card rounded-xl p-3 hover-lift">
+                    <div class="relative aspect-[2/3] overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-800 shadow-sm transition-all group-hover:shadow-xl">
+                        <img alt="${book.title}" class="h-full w-full object-cover" src="${book.image}" />
+                        <div class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform bg-gradient-to-t from-black/80 to-transparent">
+                            <button class="w-full py-2 bg-primary text-white text-xs font-bold rounded uppercase tracking-wider">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h3 class="font-bold text-slate-900 dark:text-white truncate">${book.title}</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">${book.author}</p>
+                        <div class="flex items-center gap-1 text-primary mt-1">
+                            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <span class="text-xs font-bold text-slate-700 dark:text-slate-300">${book.rating}</span>
+                        </div>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="font-bold text-primary">$${book.price}</span>
+                            <button onclick="addToCart(${book.id})" class="p-1.5 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-primary hover:text-white transition-colors">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" /><line x1="12" y1="14" x2="12" y2="20" /><line x1="9" y1="17" x2="15" y2="17" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Render Categories
+            const categoriesGrid = document.getElementById('categories-grid');
+            categoriesGrid.innerHTML = categories.map(cat => `
+                <a href="shop.html?category=${cat.id}" class="relative h-48 overflow-hidden rounded-xl group cursor-pointer hover-lift">
+                    <div class="absolute inset-0 ${cat.color} group-hover:bg-opacity-50 transition-all z-10"></div>
+                    <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="${cat.image}" />
+                    <div class="relative z-20 h-full flex items-center justify-center">
+                        <h3 class="text-2xl font-bold text-white serif-heading drop-shadow-md">${cat.name}</h3>
+                    </div>
+                </a>
+            `).join('');
+        });
+    </script>
+</body>
+
+</html>

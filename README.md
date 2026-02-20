@@ -51,4 +51,3 @@ The project uses a custom design system defined in `css/styles.css`:
 - **Aesthetic**: Minimalist borders, generous spacing, and subtle backdrop filters.
 
 ---
-Built with ❤️ by Antigravity

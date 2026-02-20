@@ -1,54 +1,145 @@
-# Sell For - Premium Online Bookstore
+📚 Sell For — Modern Bookstore Web Application
 
-A modern, clean, and dynamic book-selling platform inspired by the Glaido design aesthetic. Built with premium visual hierarchy, smooth transitions, and a mobile-first approach.
 
-## 🌟 Features
 
-- **Dynamic Discovery**: Browse featured categories and top-rated books on a stunning discovery landing page.
-- **Advanced Shop**: Complete product browsing experience with category filtering and smart sorting.
-- **Interactive Cart**: Fully functional cart system with quantity adjustment, real-time total calculations, and persistence.
-- **Premium Design**: Glaido-inspired visuals including:
-  - Responsive header with glassmorphism effects.
-  - Animated gradient backgrounds.
-  - Dark/Light mode support with persistence.
-  - Smooth "hover-lift" micro-interactions.
-- **Fully Responsive**: Optimized for desktop, tablet, and mobile devices.
 
-## 🚀 How to Run Locally
 
-Since this is a clean frontend project using vanilla JavaScript and Tailwind CSS (via CDN), you can run it easily:
 
-1. **Option A: Simple Open**
-   - Just open `index.html` in any modern web browser.
 
-2. **Option B: Live Server (Recommended)**
-   - If using VS Code, right-click `index.html` and select **"Open with Live Server"**.
-   - Alternatively, use any local server like `npx serve .`.
 
-## 📁 Project Structure
+Sell For is a modern, responsive bookstore web application built to demonstrate clean frontend architecture, structured Git workflow, and professional deployment practices.
 
-```text
-stitch/
-├── index.html          # Homepage (Discover)
-├── shop.html           # Product Browsing
-├── categories.html     # Category Navigation
-├── cart.html           # Cart & Checkout
+🔗 Live Demo
+
+👉 Live Site:
+https://your-vercel-link.vercel.app
+
+(Replace this with your actual Vercel URL)
+
+📌 Project Overview
+
+Sell For simulates a real-world ecommerce bookstore experience with structured multi-page navigation and responsive design principles.
+
+This project was built with a focus on:
+
+Clean UI structure
+
+Proper folder organization
+
+Version control best practices
+
+Deployment workflow
+
+Portfolio-level documentation
+
+Production-ready repository standards
+
+🧱 Features
+
+Responsive layout (Mobile / Tablet / Desktop)
+
+Homepage with featured books and categories
+
+Shop page with browsing interface
+
+Cart / Checkout page UI
+
+Consistent navigation system
+
+Organized folder structure
+
+GitHub version control integration
+
+Continuous deployment with Vercel
+
+🛠 Tech Stack
+Frontend
+
+HTML5
+
+CSS3
+
+JavaScript
+
+Tools & Deployment
+
+Git
+
+GitHub
+
+Vercel
+
+📂 Project Structure
+.
+├── index.html
+├── shop.html
+├── categories.html
+├── cart.html
 ├── css/
-│   └── styles.css      # Custom Design System
+│   └── styles.css
 ├── js/
-│   ├── data.js         # Book & Category Data
-│   ├── cart.js         # Cart Logic
-│   └── main.js         # Shared UI Logic
-├── assets/             # Images & Icons
-└── README.md           # Project Documentation
-```
+│   ├── main.js
+│   ├── data.js
+│   └── cart.js
+└── assets/
+    └── images/
+🚀 Getting Started
+Run Locally (Simple Way)
 
-## 🎨 Design System
+Clone the repository:
 
-The project uses a custom design system defined in `css/styles.css`:
-- **Primary Color**: `#ec5b13` (Orange-red)
-- **Typography**: Inter (Body) & Playfair Display (Serif Headings)
-- **Aesthetic**: Minimalist borders, generous spacing, and subtle backdrop filters.
+git clone https://github.com/RashmindaEkanayake/sell-for.git
 
----
-Built with ❤️ by Antigravity
+Open index.html in your browser.
+
+Run with Local Server (Recommended)
+
+Using Python:
+
+python -m http.server 5500
+
+Then visit:
+
+http://localhost:5500
+
+Or use VS Code → Live Server extension.
+
+🎯 Professional Development Focus
+
+This project demonstrates:
+
+Multi-page frontend architecture
+
+Clean UI separation and modular structure
+
+Git version control workflow
+
+Repository organization best practices
+
+Deployment pipeline (GitHub → Vercel)
+
+Professional README documentation
+
+🔮 Future Improvements
+
+Convert to React + TypeScript
+
+Add backend (Node.js + database)
+
+Implement authentication
+
+Add real checkout processing
+
+Improve accessibility (ARIA roles, better semantics)
+
+Add animations and micro-interactions
+
+Integrate real API data
+
+📄 License
+
+This project is licensed under the MIT License.
+
+👨‍💻 Author
+
+Rashminda Ekanayake
